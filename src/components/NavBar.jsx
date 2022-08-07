@@ -6,8 +6,7 @@ const NavBar = props => {
 
 	return (
 		<div style={{ position: 'relative', height: '10vh', width: '100%', background: '#30C5FF', display: 'flex', alignItems: 'center'}}>
-            <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center', width: '20%' }}>
-                Fooduke
+            <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center', marginLeft: '4vw' }}>
                 <span className='home-button'>
                     <img
                         src={logo}

@@ -7,6 +7,7 @@ import {
 import ProgressBar from "./components/ProgressBar";
 import NavBar from "./components/NavBar";
 import Calculator from "./components/Calculator";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const App = () => {
   return (
