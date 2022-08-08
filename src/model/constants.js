@@ -8,6 +8,6 @@ export const PLANS = {
     'Plan J': 1764
 };
 
-export const START_DATE = 'August 29';
+export const START_DATE = 'August 29 2022';
 
-export const END_DATE = 'December 19';
+export const END_DATE = 'December 19 2022';

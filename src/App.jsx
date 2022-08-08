@@ -4,11 +4,10 @@ import {
   Switch,
   Route
 } from "react-router-dom";
-import ProgressBar from "./components/ProgressBar";
 import NavBar from "./components/NavBar";
 import Calculator from "./components/Calculator";
+import './App.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
 const App = () => {
   return (
     <Router>
