@@ -1,1 +1,13 @@
-@import "custom";
+@import "./custom.scss";
+
+$theme-colors: (
+  "primary": $palette1,
+  "secondary": $palette2,
+);
+
+.app{
+    width: 100vw;
+    height: 100vh;
+    background-color: $palette4;
+}
+@import "~bootstrap/scss/bootstrap.scss";

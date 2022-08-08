@@ -12,12 +12,7 @@ const ProgressBar = (props = { percentage: "0%" }) => {
   return (
     <>
       <div className="progressVisualFull">
-        <div
-          style={{
-            width: width,
-          }}
-          className="progressVisualPart"
-        />
+        <div style={{ width: width }} className="progressVisualPart" />
       </div>
     </>
   );

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import ProgressBar from './ProgressBar';
 import PlanButton from './PlanButton';
 import { PLANS, START_DATE, END_DATE } from '../model/constants';
-
+import './Calculator.scss';
 
 const Calculator = () =>  {
 
@@ -29,7 +29,7 @@ const Calculator = () =>  {
     }
     
     return (
-        <div style = {{width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+        <div className='calculator' style = {{width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
             
             <div style ={{marginTop: '5vh', marginBottom: '5vh', display: 'flex', flexDirection: 'row'}}>
                 {Object.keys(PLANS).map(planOption => 
