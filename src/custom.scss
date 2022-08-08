@@ -2,3 +2,11 @@ $palette1: #1C3879;
 $palette2: #607EAA;
 $palette3: #E9DDC2;
 $palette4:#F9F5EB;
+
+$theme-colors: (
+    "primary":$palette1,
+    "secondary": $palette2
+);
+
+
+@import "~bootstrap/scss/bootstrap";
