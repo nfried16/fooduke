@@ -4,10 +4,11 @@ import {
   Switch,
   Route
 } from "react-router-dom";
-import ProgressBar from "./components/ProgressBar";
 import NavBar from "./components/NavBar";
+import Footer from './components/Footer';
 import Calculator from "./components/Calculator";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.css';
 
 const App = () => {
   return (
@@ -24,6 +25,7 @@ const App = () => {
 						</div>
 					</Route>
         </Switch>
+        <Footer/>
       </div>
     </Router>
   );

@@ -9,9 +9,7 @@ const Calculator = () =>  {
     const [error, setError] = useState(null);
 
     const getAmount = plan => {
-        const today = new Date('November 20');
-        // Start and end will always be 2000 so we'll make today 2000.
-        today.setFullYear(2000);
+        const today = new Date();
         const start = new Date(START_DATE);
         const end = new Date(END_DATE);
         if(!error && today < start) {
@@ -29,7 +27,7 @@ const Calculator = () =>  {
     }
     
     return (
-        <div style = {{width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+        <div style = {{width: '100%', height: '80vh', display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
             <div style ={{marginTop: '5vh', marginBottom: '5vh', display: 'flex', flexDirection: 'row'}}>
                 {Object.keys(PLANS).map(planOption => 
                     <div key = {planOption} style = {{margin: '1vh'}}>

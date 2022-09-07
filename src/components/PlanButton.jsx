@@ -9,6 +9,10 @@ const PlanButton = props => {
     }
     return(
         <Button 
+            style = {{borderColor: '#023188', 
+                      color: props.selected ? '#023188' : 'white', 
+                      backgroundColor: props.selected ? 'white' : '#023188'
+                    }}
             variant={props.selected ? 'primary' : 'outline-primary'}
             onClick={() => onClick(props.plan)}
         >
