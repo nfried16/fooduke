@@ -1,14 +1,22 @@
-// import { React, useState } from "react";
-// import {
-//     Progress,
-//     ProgressLabel,
-//     CircularProgress,
-//     CircularProgressLabel,
-// } from "@chakra-ui/progress";
+import React, { useEffect, useState } from "react";
+import "./ProgressBar.scss";
 
-// function ProgressBar() {
-//     return (
-//         <Progress value={50} />
-//     )
-// }
-// export default ProgressBar;
+const ProgressBar = ({percentage}) => {
+  const [width, setWidth] = useState(0);
+
+  useEffect(() => {
+    requestAnimationFrame(() => {
+      setWidth(percentage);
+    });
+  }, [percentage]);
+
+  return (
+    <>
+      <div className="progressVisualFull">
+        <div style={{ width: width+'%' }} className="progressVisualPart" />
+      </div>
+    </>
+  );
+};
+
+export default ProgressBar;

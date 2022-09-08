@@ -1,12 +1,13 @@
-import React, { useState } from 'react';
-import { PLANS, START_DATE, END_DATE } from '../model/constants';
-import PlanButton from './PlanButton';
+import React, { useState } from "react";
+import ProgressBar from "./ProgressBar";
+import PlanButton from "./PlanButton";
+import { PLANS, START_DATE, END_DATE } from "../model/constants";
+import "./Calculator.scss";
 
-const Calculator = () =>  {
-
-    const [plan, setPlan] = useState(localStorage.getItem('plan') || 'Plan A');
-    const [percentage, setPercentage] = useState(0);
-    const [error, setError] = useState(null);
+const Calculator = () => {
+  const [plan, setPlan] = useState(localStorage.getItem("plan") || "Plan A");
+  const [percentage, setPercentage] = useState("0%");
+  const [error, setError] = useState(null);
 
     const getAmount = plan => {
         const today = new Date();
@@ -27,8 +28,8 @@ const Calculator = () =>  {
     }
     
     return (
-        <div style = {{width: '100%', height: '80vh', display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
-            <div style ={{marginTop: '5vh', marginBottom: '5vh', display: 'flex', flexDirection: 'row'}}>
+        <div className = 'calculator'>
+            <div className='buttonContainer'>
                 {Object.keys(PLANS).map(planOption => 
                     <div key = {planOption} style = {{margin: '1vh'}}>
                         <PlanButton 
@@ -41,7 +42,7 @@ const Calculator = () =>  {
             </div>
             {
                 error || 
-                <div style = {{fontSize: '3rem', fontWeight: 'bolder', textAlign: 'center'}}>
+                <div className='expectedPointsMessage'>
                     You should have {getAmount(plan)} food points left!
                 </div>
             }

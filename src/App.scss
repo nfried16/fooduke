@@ -1,3 +1,11 @@
+@import "./custom.scss";
+
+.app {
+  width: 100vw;
+  height: 100vh;
+  background-color: $palette4;
+}
+
 .lefttriangle {
   border-style: solid;
   border-color: transparent transparent #023188 transparent;
