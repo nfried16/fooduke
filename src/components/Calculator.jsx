@@ -6,7 +6,7 @@ import "./Calculator.scss";
 
 const Calculator = () => {
   const [plan, setPlan] = useState(localStorage.getItem("plan") || "Plan A");
-  const [percentage, setPercentage] = useState("0%");
+  const [percentage, setPercentage] = useState(0);
   const [error, setError] = useState(null);
 
     const getAmount = plan => {
@@ -29,6 +29,7 @@ const Calculator = () => {
     
     return (
         <div className = 'calculator'>
+            <ProgressBar percentage={percentage}/>
             <div className='buttonContainer'>
                 {Object.keys(PLANS).map(planOption => 
                     <div key = {planOption} style = {{margin: '1vh'}}>

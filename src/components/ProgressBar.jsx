@@ -12,8 +12,8 @@ const ProgressBar = ({percentage}) => {
 
   return (
     <>
-      <div className="progressVisualFull">
-        <div style={{ width: width+'%' }} className="progressVisualPart" />
+      <div className="progressVisualFull" style={{border: '1px solid black', borderRadius: '0.6vw'}}>
+        <div style={{ width: width+'%'}} className="progressVisualPart" />
       </div>
     </>
   );
