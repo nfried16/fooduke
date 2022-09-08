@@ -2,6 +2,28 @@
 
 .app {
   width: 100vw;
-  height: 100vh;
   background-color: $palette4;
+  overflow: scroll;
+}
+
+.lefttriangle {
+  border-style: solid;
+  border-color: transparent transparent #023188 transparent;
+  border-width: 0 32px 57px 0;
+  display: inline-block;
+  height: 0;
+  width: 0;
+}
+
+.righttriangle {
+  border-style: solid;
+  border-color: transparent #023188 transparent transparent;
+  border-width: 57px 32px 0 0;
+  display: inline-block;
+  height: 0;
+  width: 0;
+}
+
+.home-button {
+  top: 0px;
 }
